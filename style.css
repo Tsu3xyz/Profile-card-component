@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --main-color: hsl(185, 75%, 39%);
+  --second-dark-color: hsl(229, 23%, 23%);
+  --second-grey-color: hsl(227, 10%, 46%);
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
+  overflow: hidden;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.wrapper::after {
+  content: "";
+  height: 1000px;
+  width: 1000px;
+  background-image: linear-gradient(
+    to top right,
+    var(--main-color) 20%,
+    rgba(255, 255, 255, 0.2)
+  );
+  position: absolute;
+  border-radius: 50%;
+  top: -500px;
+  left: -200px;
+}
+
+.wrapper::before {
+  content: "";
+  height: 1000px;
+  width: 1000px;
+  background-image: linear-gradient(
+    to top right,
+    var(--main-color) 20%,
+    rgba(255, 255, 255, 0.2)
+  );
+  position: absolute;
+  border-radius: 50%;
+  bottom: -500px;
+  right: -200px;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.top {
+  background-image: url(/images/bg-pattern-card.svg);
+  height: 35%;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.photo {
+  border-radius: 50%;
+  border: 4px white solid;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+}
+.center {
+  height: 40%;
+}
+
+.bottom {
+  border-top: 1px solid rgb(223, 223, 223);
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 10px;
+  color: grey;
+}
+.bottom span {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.followers,
+.likes,
+.photos {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 2px;
+  align-items: center;
+  width: 33%;
+}
+
+.center {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  font-size: 18px;
+  position: relative;
+}
+
+.name span {
+  font-weight: 700;
+  color: black;
+}
+
+.name {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(187, 187, 187);
+}
+
+.city {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(187, 187, 187);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 350px;
+  }
+}
